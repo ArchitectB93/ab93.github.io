@@ -101,6 +101,7 @@ h2 {
   transition: 0.5s;
   position: relative;
   overflow: hidden;
+  left: 10%;
 }
 
 .box:hover {
