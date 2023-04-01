@@ -14,49 +14,51 @@
 </head>
 
 <body>
-  <header id="banner" class="banner">
-  </header>
-  <section class="container">
-    <div>
-      <img src="face4.jpeg" width="300px" height="350px" alt="face" id="face">
-    </div>
-    
-    <p>
-      Hello my name is Brian. I am a 29 year old Web developer currently living in California.
-      Other than coding I like to hangout with friends & family, play golf, indulge in delicious foods, explore the
-      metaverse and play computer/videogames.
-    </p>
-    <p>
-      I started learning code around February 2022 because I noticed the world becoming more digital so I figured learning
-      how to code and develope would be a good idea.
-      <br>
-      <br>
-      Being able to solve problems, and create websites / games / apps / etc. is also really fun and intriguing to me
-      with what is becoming
-      possible.
-    </p>
-    <p>
-      Languages I know: HTML / CSS / JS / Bootstrap / React / Git
-      <ul style="color: black; position: absolute; left: 50%;"><a style="font-size: 20px;">2023 focus (slowly updated):</a>
-        <li>Backend development</li>
-        <li>Python / Pinescript</li>
-        <li>Create a E-commerce store</li>
-        <li>Land a developer job</li>
-      </ul>
-    </p>
-    <br/>
-    <br>
-      <div class="box"><a href="project.html" style="color: white;">Projects</a></div>
-    <br>
-    <div style="position: relative; left: 13%;">
-    <a href="https://www.linkedin.com/in/architectb/" class="fa fa-linkedin" target="_blank" rel="noopener"></a>
-    <a href="https://github.com/ArchitectB93" class="fa fa-github" target="_blank" rel="noopener"></a>
-    <p>Email: architectb93@gmail.com</p>
-    </div>
-  </section>
+  <header class="cd-header">
+		<div class="header-wrapper">
+			<div class="logo-wrap">
+				<a href="#" class="hover-target"><span>Brian </span>D.</a>
+			</div>
+			<div class="nav-but-wrap">
+				<div class="menu-icon hover-target">
+					<span class="menu-icon__line menu-icon__line-left"></span>
+					<span class="menu-icon__line"></span>
+					<span class="menu-icon__line menu-icon__line-right"></span>
+				</div>					
+			</div>					
+		</div>				
+	</header>
+
+	<div class="nav">
+		<div class="nav__content">
+			<ul class="nav__list">
+				<li class="nav__list-item active-nav"><a href="#" class="hover-target">About</a></li>
+				<li class="nav__list-item"><a href="project.html" class="hover-target">Projects</a></li>
+				<li class="nav__list-item"><a href="#" class="hover-target">News</a></li>
+				<li class="nav__list-item"><a href="https://www.linkedin.com/in/architectb/" class="hover-target">Contact</a></li>
+			</ul>
+		</div>
+	</div>		
+
+	<div class="section full-height over-hide">	
+		<div class="switch-wrap">
+			<h1>About Me</h1>
+			<div id="switch" class="hover-target">
+				<div id="circle"></div>
+			</div>
+			<p><span>dark</span> - <span>light</span></p>
+		</div>
+	</div>	
+
+  <div style="max-width: 300px; max-height: 300px;">
+    <img src="face4.jpeg" alt="face">
+  </div>
 
 
-
+  <div class='cursor' id="cursor"></div>
+	<div class='cursor2' id="cursor2"></div>
+	<div class='cursor3' id="cursor3"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript" src="about.js"></script>
 </body>
 

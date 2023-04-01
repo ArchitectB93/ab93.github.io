@@ -1,26 +1,67 @@
-const h1 = document.getElementById("h1"),
-  banner = document.getElementById("banner"),
-  button = document.getElementById("button");
+(function($) { "use strict";
+		
+	//Page cursors
 
-const onScroll = (event) => {
-  const scrollPosition = event.target.scrollingElement.scrollTop;
-  if (scrollPosition > 150) {
-    banner.style.backgroundSize = "150%";
-    h1.style.opacity = 0;
-    h1.style.translate = "0 -50px";
-    h1.style.scale = "0.9";
-    button.style.opacity = 0;
-    button.style.translate = "0 -50px";
-    button.style.scale = "0.8";
-  } else {
-    banner.style.backgroundSize = "180%";
-    h1.style.opacity = 1;
-    h1.style.translate = 0;
-    h1.style.scale = 1;
-    button.style.opacity = 1;
-    button.style.translate = 0;
-    button.style.scale = 1;
-  }
-};
+    document.getElementsByTagName("body")[0].addEventListener("mousemove", function(n) {
+        t.style.left = n.clientX + "px", 
+		t.style.top = n.clientY + "px", 
+		e.style.left = n.clientX + "px", 
+		e.style.top = n.clientY + "px", 
+		i.style.left = n.clientX + "px", 
+		i.style.top = n.clientY + "px"
+    });
+    var t = document.getElementById("cursor"),
+        e = document.getElementById("cursor2"),
+        i = document.getElementById("cursor3");
+    function n(t) {
+        e.classList.add("hover"), i.classList.add("hover")
+    }
+    function s(t) {
+        e.classList.remove("hover"), i.classList.remove("hover")
+    }
+    s();
+    for (var r = document.querySelectorAll(".hover-target"), a = r.length - 1; a >= 0; a--) {
+        o(r[a])
+    }
+    function o(t) {
+        t.addEventListener("mouseover", n), t.addEventListener("mouseout", s)
+    }
+	
+	//Navigation
 
-document.addEventListener("scroll", onScroll);
+	var app = function () {
+		var body = undefined;
+		var menu = undefined;
+		var menuItems = undefined;
+		var init = function init() {
+			body = document.querySelector('body');
+			menu = document.querySelector('.menu-icon');
+			menuItems = document.querySelectorAll('.nav__list-item');
+			applyListeners();
+		};
+		var applyListeners = function applyListeners() {
+			menu.addEventListener('click', function () {
+				return toggleClass(body, 'nav-active');
+			});
+		};
+		var toggleClass = function toggleClass(element, stringClass) {
+			if (element.classList.contains(stringClass)) element.classList.remove(stringClass);else element.classList.add(stringClass);
+		};
+		init();
+	}();
+
+	
+	//Switch light/dark
+	
+	$("#switch").on('click', function () {
+		if ($("body").hasClass("light")) {
+			$("body").removeClass("light");
+			$("#switch").removeClass("switched");
+		}
+		else {
+			$("body").addClass("light");
+			$("#switch").addClass("switched");
+		}
+	});          
+              
+})(jQuery); 
